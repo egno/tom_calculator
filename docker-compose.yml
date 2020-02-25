@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+
+  app:
+    build:
+      dockerfile: "${PWD}/Dockerfile"
+      context: "${PWD}"
+    volumes:
+      - "${PWD}:/src"
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    restart: always
+
